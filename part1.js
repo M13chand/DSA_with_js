@@ -37,3 +37,7 @@ console.log(5 === "5");
 // false because the first operand is a number and the second operand is a string so they are not equal.
 
 //Q4. Accept and print the answer.
+let age = prompt("what is your age?");
+console.log(typeof (age)); //string  by default prompts value is string 
+let newAge = Number(age);  //It will convert the string to a number 
+console.log(typeof (newAge)); //number

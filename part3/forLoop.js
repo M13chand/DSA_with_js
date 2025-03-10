@@ -99,26 +99,52 @@ for (let e = 1; e <= n1; e++) {
 console.log("The factorial  is :", fact);
 
 //factors ofthe numbers
-n2 = 12;
-for (let f = 1; f <= Math.floor(n2 / 2); f++) {  //f =1 ; f=12/2; f++ , f=1 ;f=6;f++
-  if (n2 % f == 0) {
-    console.log(`The factors of ${n2} is`, f);
-  }
-}
-console.log(`The factors of ${n2} is`, n2);
+// n2 = 12;
+// for (let f = 1; f <= Math.floor(n2 / 2); f++) {  //f =1 ; f=12/2; f++ , f=1 ;f=6;f++
+//   if (n2 % f == 0) {
+//     console.log(`The factors of ${n2} is`, f);
+//   }
+// }
+// console.log(`The factors of ${n2} is`, n2);
+
 
 //check the prime  number  or not
-
-n3 = 5;
+n3 = 2;
 var prime = true;
-for (let g = 2; g < n3; g++) {
+for (var g = 2; g <= Math.floor(n3 / 2); g++) {
   if (n3 % g === 0) {
     prime = false;
-    console.log(n3, "is not prime");
     return;
   }
 }
-console.log(n3, "is prime");
+console.log(prime);
+
+n4 = 2;
+function isPrime(n4) {
+  if (n4 <= 1) return false;
+  if (n4 == 2) return true;
+  if (n4 % 2 == 0) return false;
+  for (let h = 3; h <= Math.sqrt(n3); h += 2) {
+    if (n3 % h == 0) return false;
+  }
+  return true;
+}
+console.log(isPrime(n4));
 
 
 
+//break and continue concept
+
+
+//break 
+for (var k = 1; k < 23; k++) {
+  if (k === 11) break; //it terminates the loop when condition is meet
+  console.log("The value fo k is:", k);
+
+}
+
+
+for (var i = 0; i <= 5; i++) {
+  if (i === 3) continue; //it will leave the 3 value and continue the the iteration
+  console.log("The value of i is :", i)
+}

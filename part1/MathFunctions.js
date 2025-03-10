@@ -76,5 +76,13 @@ let l = 5
 let s = (j + k + l) / 2;
 console.log(s);
 
-let area = Math.sqrt(s * (s - j) * (s - k) * (s - l)).toFixed(2);
+let area = Math.sqrt(s * (s - j) * (s - k) * (s - l));
 console.log(area);
+
+
+// Problem-4
+// calculate the area of the circle
+let radius = 7;
+let areaOfCircle = (Number((Math.PI * radius * radius).toFixed(2)));
+console.log("Area of circle is:", areaOfCircle);
+console.log("The type of the area of circle is :", typeof (areaOfCircle));

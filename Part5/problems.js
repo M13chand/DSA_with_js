@@ -71,18 +71,42 @@ for (let l = 0; l < s.length - 1; l++) {
 console.log(toggle);
 
 
-//Q5. Frequency of each character in the string
-//manojan
-//m-1 a-2 n-2 n-1 0-1 j-1
-let str = "manojan";
-let arr = new Array(128).fill(0);
-for (let m = 0; m < str.length; m++) {
-  let indx = str.charCodeAt(m);
-  arr[indx] = arr[indx] + 1;
-}
+// //Q5. Frequency of each character in the string
+// //manojan
+// //m-1 a-2 n-2 n-1 0-1 j-1
+// let str = "manojan";
+// let arr = new Array(128).fill(0);
+// for (let m = 0; m < str.length; m++) {
+//   let indx = str.charCodeAt(m);
+//   arr[indx] = arr[indx] + 1;
+// }
 
-for (n = 0; n < arr.length; n++) {
-  if (arr[n] > 0) {
-    console.log(String.fromCharCode(n) + " appears at " + arr[n]);
+// for (n = 0; n < arr.length; n++) {
+//   if (arr[n] > 0) {
+//     console.log(String.fromCharCode(n) + " appears at " + arr[n]);
+//   }
+// }
+
+
+// show the frequency of each character in the string in the sorted order
+//manojan
+let str1 = "manojchand";
+let arr1 = new Array(128).fill(0);
+let result = [];
+let seen = new Set();
+
+for (let m = 0; m < str1.length; m++) {
+  let indx = str1.charCodeAt(m);
+  arr1[indx] += 1;
+
+  // Ensure we only store the first occurrence in order
+  if (!seen.has(str1[m])) {
+    seen.add(str1[m]);
+    result.push(str1[m]);
   }
 }
+
+// Printing the result in order
+console.log(result.map(char => `${char}-${arr1[char.charCodeAt(0)]}`).join(" "));
+
+

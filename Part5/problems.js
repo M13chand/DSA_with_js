@@ -60,13 +60,29 @@ let s = "mAnoJ cHanD tHaQuReE";
 
 let toggle = '';
 for (let l = 0; l < s.length - 1; l++) {
-  let ch = s.charAt(l);
+  let ch = s.charCodeAt(l);
 
-  if (s.charCodeAt(l) >= 65 && s.charCodeAt(l) <= 90) {
-    toggle = toggle + String.fromCharCode(s.charCodeAt(l) + 32);
-  } else if (s.charCodeAt(l) >= 97 && s.charCodeAt(l) <= 122) {
-    toggle = toggle + String.fromCharCode(s.charCodeAt(l) - 32);
+  if (ch >= 65 && ch <= 90) {
+    toggle = toggle + String.fromCharCode(ch + 32);
+  } else if (ch >= 97 && ch <= 122) {
+    toggle = toggle + String.fromCharCode(ch - 32);
   }
 }
 console.log(toggle);
 
+
+//Q5. Frequency of each character in the string
+//manojan
+//m-1 a-2 n-2 n-1 0-1 j-1
+let str = "manojan";
+let arr = new Array(128).fill(0);
+for (let m = 0; m < str.length; m++) {
+  let indx = str.charCodeAt(m);
+  arr[indx] = arr[indx] + 1;
+}
+
+for (n = 0; n < arr.length; n++) {
+  if (arr[n] > 0) {
+    console.log(String.fromCharCode(n) + " appears at " + arr[n]);
+  }
+}

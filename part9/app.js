@@ -1,4 +1,4 @@
-// Bubble short  Algorithm
+// Bubble sort  Algorithm
 let array = [10, 5, 12, 1, 3]
 let n = array.length;
 for (let i = 0; i < n - 1; i++) {

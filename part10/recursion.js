@@ -46,10 +46,24 @@ temp(4);
 
 // OR
 
-function printNumber(a) {
-  if (a == 0) return
-  printNumber(a - 1);
-  console.log(a);
-}
-printNumber(10);
+// function printNumber(a) {
+//   if (a == 0) return
+//   printNumber(a - 1);
+//   console.log(a);
+// }
+// printNumber(10);
 
+// sum of the number in the reverse order 
+
+function sum(n1) {
+  if (n1 == 1) return 1;
+  return n1 + sum(n1 - 1);
+
+}
+console.log("The sum of the number is ", sum(10))
+
+// factorial of the number 
+function fact(n) {
+  if (n == 0) return
+
+}
